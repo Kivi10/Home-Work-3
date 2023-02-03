@@ -1,6 +1,6 @@
 ﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом. Не используйте строки
 
-int Promt(string message) // Пользователь вводит произвольное число
+int Promt(string? message) // Пользователь вводит произвольное число
 {
     System.Console.Write($"{message} -> ");
     return int.Parse(Console.ReadLine());
@@ -11,7 +11,7 @@ int Mirror(int num) // Зеркальное отражение введенно�
     int tail1 = num % 10;
     int res = tail1;
 
-    while (num > 10)
+    while (num > 9)
     {
         tail1 = num % 10;
         int temp = num / 10;
@@ -51,7 +51,7 @@ int Symbols(int quan) // Подсчет количества символов в
 
 int Cut(int nums, int raz) // Разрезает число на половину.
 {
-    while( raz > 0)
+    while (raz > 0)
     {
         nums = nums / 10;
         raz--;
@@ -66,6 +66,3 @@ number1 = Cut(number1, count);
 number2 = Cut(number2, count);
 
 bool check = Check(number1, number2);
-
-
-
